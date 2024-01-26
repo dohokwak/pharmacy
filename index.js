@@ -25,8 +25,8 @@ app.get("/pharmach_list", (req, res) => {
                         "ORD": req.query.ORD,
                         "pageNo": req.query.pageNo,
                         "numOfRows": req.query.numOfRows
-                    }
-                    
+                    },
+                    headers: {"Accept-Encoding": "application/json"},
                 })
             }
             catch(e) {
@@ -36,6 +36,6 @@ app.get("/pharmach_list", (req, res) => {
         }
         api().then((response) => {
             res.setHeader("Access-Control-Allow-Origin", "*");
-            res.json(response.data.response.body);
+            res.json(response.data.response?.body);
         });
 });
