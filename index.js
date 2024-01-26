@@ -25,8 +25,7 @@ app.get("/pharmach_list", (req, res) => {
                         "ORD": req.query.ORD,
                         "pageNo": req.query.pageNo,
                         "numOfRows": req.query.numOfRows
-                    },
-                    headers: {"Accept-Encoding": "application/json"},
+                    }
                 })
             }
             catch(e) {
