@@ -35,6 +35,6 @@ app.get("/pharmach_list", (req, res) => {
         }
         api().then((response) => {
             res.setHeader("Access-Control-Allow-Origin", "*");
-            res.json(response.data.response?.body);
+            res.json(response.data.response.body);
         });
 });
