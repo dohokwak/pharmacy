@@ -15,7 +15,7 @@ app.get("/pharmach_list", (req, res) => {
         let api = async() => {
             let response = null;
             try {
-                response = await axios.get("http://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire", {
+                response = await axios.get("https://apis.data.go.kr/B552657/ErmctInsttInfoInqireService/getParmacyListInfoInqire?serviceKey", {
                     params: {
                         "serviceKey": "IZZGckj3W3TCPtsbRQQSADS7mFZASo0uNz58OHEtLXL4mDv3hSeSlATBPlNvhIPLhJ8X9W0cIBH+V1GQBgIhDA==",
                         "Q0": req.query.Q0,

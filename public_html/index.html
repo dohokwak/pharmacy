@@ -4,19 +4,22 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div style="margin-top: 20px; margin-bottom: 10px; font-weight: bold;">
-            약국 지도
-        </div>
-        <div id="map" style="width:100%; height:80%">
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet">
 
+        <div style="text-align:center; font-family: 'Jua'; font-size:100px; margin-top: 70px; margin-bottom: 50px; font-weight: bold; background-color:#CCB5E2;">
+            내 주변 약국
+        </div>
+        
+        <div id="map" style="width:100%; height:80%">
         </div>
     </body>
     <script>
         $(document).ready(async function(){
             let XY = await getlocation();
-            //지도를 삽입할 HTML 요소 또는 HTML 요소의 id를 지정합니다.
+            //지도를 삽입할 HTML 요소 또는 HTML 요소의 id를 지정
             var mapDiv = document.getElementById('map'); // 'map'으로 선언해도 동일
-            //옵션 없이 지도 객체를 생성하면 서울 시청을 중심으로 하는 16 레벨의 지도가 생성됩니다.
+            //옵션 없이 지도 객체를 생성하면 서울 시청을 중심으로 하는 16 레벨의 지도가 생성
             var mapOptions = {
                 center: new naver.maps.LatLng(XY.lat, XY.lng),
                 zoom: 15
